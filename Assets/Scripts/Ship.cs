@@ -47,10 +47,15 @@ public class Ship : MonoBehaviour {
 	}
 
 	//Movement with mouse
+	//If the ship has been picked up
 		if(m_isSelected){
 			Vector3 tmpMouse = Input.mousePosition;
 			tmpMouse.z = 8f;
 			this.transform.position = Camera.main.ScreenToWorldPoint(tmpMouse);
-		}
+			//Rotate the ship if it has been picked up
+			if(Input.GetMouseButtonDown(1) && m_isSelected){
+				this.transform.Rotate(0, 90, 0);
+			}
+		} 
 	}
 }
