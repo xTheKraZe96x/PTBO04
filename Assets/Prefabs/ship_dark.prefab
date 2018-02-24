@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 23940392917606358}
   - component: {fileID: 54775558546755302}
   - component: {fileID: 114611528997378362}
+  - component: {fileID: 64187373189461942}
   m_Layer: 0
   m_Name: ship_dark
   m_TagString: Untagged
@@ -356,7 +357,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1769789837933738}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.96, y: 1.3, z: -0.01}
+  m_LocalPosition: {x: -1.49, y: 1.3, z: -0.01}
   m_LocalScale: {x: 0.033141036, y: 0.033141028, z: 0.033141028}
   m_Children:
   - {fileID: 4826266959648220}
@@ -1414,6 +1415,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &64187373189461942
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769789837933738}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 7851dd8b5ef0e954eb14a1300c5be178, type: 3}
 --- !u!114 &114611528997378362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1425,3 +1440,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7935e76672e23764b97d47a85e858316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_rgb: {fileID: 54775558546755302}

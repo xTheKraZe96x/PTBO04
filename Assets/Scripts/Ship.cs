@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class Ship : MonoBehaviour {
 
-	private Rigidbody m_rgb;
+	public Rigidbody m_rgb;
 	private int m_health;
 	private int m_size;
 	private bool m_isSelected;
+	RaycastHit m_shipHit;
 
-	GameObject m_gameObject;
+	public Collider m_collider;
 	
-	private Renderer m_rend;
 	
 
 	// Use this for initialization
 	void Start () {
-		m_rgb = GetComponent<Rigidbody>();
-		m_rend = GetComponent<Renderer>();
+		
 	}
 	
 	// Update is called once per frame
@@ -39,13 +38,13 @@ public class Ship : MonoBehaviour {
 	// 	if(Input.GetKeyDown(KeyCode.DownArrow)){
 	// 		m_rgb.MovePosition(m_rgb.position + Vector3.down);
 	// 	}
-	// }
+	// }	
 
-	if(Input.GetMouseButtonDown(0) && !m_isSelected){
-		RaycastHit m_shipHit = new RaycastHit();
-			if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out m_shipHit)){
-				m_isSelected = true;
-				Debug.Log(m_isSelected);
+	if(Input.GetMouseButtonDown(0) && !this.m_isSelected){
+		Ray m_ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			if(m_collider.Raycast(m_ray, out m_shipHit, 100.0f)) {
+				this.m_isSelected = true;
+				Debug.Log(this.m_isSelected);
 			}
 		} else if (Input.GetMouseButtonDown(0) && m_isSelected) {
 					m_isSelected = false;
@@ -60,7 +59,7 @@ public class Ship : MonoBehaviour {
 			tmpMouse.z = 8f;
 			this.transform.position = Camera.main.ScreenToWorldPoint(tmpMouse);
 			//Rotate the ship if it has been picked up
-				if(Input.GetMouseButtonDown(1) && m_isSelected){
+				if(Input.GetMouseButtonDown(1) && this.m_isSelected){
 					Debug.Log("Rotation");
 					this.transform.Rotate(0, 90, 0);
 			}
