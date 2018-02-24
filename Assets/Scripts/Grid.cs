@@ -23,6 +23,7 @@ public class Grid : MonoBehaviour {
 		for(int i = 0; i < 10; i++){
 			for(int j = 0; j < 10; j++){
 				GameObject tmpTile = Instantiate(m_waterTile, new Vector3(i, j, 0),Quaternion.identity);
+				Debug.Log("Row " + i + "Column " + j );
 				tmpTile.name = "Water Tile";
 				tmpTile.transform.parent = m_gridContainer.transform;
 			}

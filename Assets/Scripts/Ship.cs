@@ -48,7 +48,7 @@ public class Ship : MonoBehaviour {
 			}
 		} else if (Input.GetMouseButtonDown(0) && m_isSelected) {
 					m_isSelected = false;
-					this.transform.position = transform.position;
+					this.transform.position = new Vector3((int)this.transform.position.x, (int)this.transform.position.y, 0);
 					Debug.Log(m_isSelected);
 			} 
 
@@ -56,7 +56,7 @@ public class Ship : MonoBehaviour {
 	//If the ship has been picked up
 		if(m_isSelected){
 			Vector3 tmpMouse = Input.mousePosition;
-			tmpMouse.z = 8f;
+			tmpMouse.z = 7.5f;
 			this.transform.position = Camera.main.ScreenToWorldPoint(tmpMouse);
 			//Rotate the ship if it has been picked up
 				if(Input.GetMouseButtonDown(1) && this.m_isSelected){
