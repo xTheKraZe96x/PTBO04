@@ -156,6 +156,25 @@ MonoBehaviour:
   m_sprite: {fileID: 21300000, guid: 4e749314a45503a4c80e161119e181ce, type: 3}
   m_gridContainer: {fileID: 68935511}
   m_waterTile: {fileID: 1687231557}
+--- !u!1 &125696711 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1769789837933738, guid: 2c3d810e28c285c47a09a777534f9617,
+    type: 2}
+  m_PrefabInternal: {fileID: 744174580}
+--- !u!64 &125696712
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125696711}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 7851dd8b5ef0e954eb14a1300c5be178, type: 3}
 --- !u!1 &466832941
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +291,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 3796d6531f93b024ebb9713ed1613e85, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2
+      value: -1.17
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3796d6531f93b024ebb9713ed1613e85, type: 3}
       propertyPath: m_LocalPosition.y

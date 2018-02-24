@@ -38,6 +38,14 @@ public class Ship : MonoBehaviour {
 	// 	}
 	// }
 
+	if(Input.GetMouseButtonDown(0)){
+		RaycastHit m_shipHit = new RaycastHit();
+		if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out m_shipHit)){
+			Debug.Log("Fuck");
+			m_isSelected = true;
+		}
+	}
+
 	//Movement with mouse
 		if(m_isSelected){
 			Vector3 tmpMouse = Input.mousePosition;
