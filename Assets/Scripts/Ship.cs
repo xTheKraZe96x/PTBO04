@@ -48,7 +48,7 @@ public class Ship : MonoBehaviour {
 			}
 		} else if (Input.GetMouseButtonDown(0) && m_isSelected) {
 					m_isSelected = false;
-					this.transform.position = new Vector3((int)this.transform.position.x, (int)this.transform.position.y, 0);
+					this.transform.position = new Vector3(Mathf.RoundToInt(this.transform.position.x), Mathf.RoundToInt(this.transform.position.y), 0);
 					Debug.Log(m_isSelected);
 			} 
 

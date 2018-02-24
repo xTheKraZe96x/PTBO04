@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ships : MonoBehaviour {
+public class ShipCreator : MonoBehaviour {
 
 	[SerializeField] private ShipTypes m_shipType;
 	[SerializeField] private GameObject[] m_shipPool;
