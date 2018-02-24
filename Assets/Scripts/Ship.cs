@@ -1,0 +1,36 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Ship : MonoBehaviour {
+
+	private Rigidbody m_rgb;
+
+	private int m_health;
+	private int m_size;
+	
+
+	// Use this for initialization
+	void Start () {
+		m_rgb = GetComponent<Rigidbody>();
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		if(Input.GetKeyDown(KeyCode.LeftArrow)){
+			m_rgb.MovePosition(m_rgb.position + Vector3.left);
+		}
+
+		if(Input.GetKeyDown(KeyCode.RightArrow)){
+			m_rgb.MovePosition(m_rgb.position + Vector3.right);
+		}
+
+		if(Input.GetKeyDown(KeyCode.UpArrow)){
+			m_rgb.MovePosition(m_rgb.position + Vector3.up);
+		}
+
+		if(Input.GetKeyDown(KeyCode.DownArrow)){
+			m_rgb.MovePosition(m_rgb.position + Vector3.down);
+		}
+	}
+}
