@@ -9,6 +9,8 @@ public class Ships : MonoBehaviour {
 	[SerializeField] private GameObject m_shipMesh;
 	[SerializeField] private int m_hitsAllowed;
 	[SerializeField] private bool m_isDestroyed = true;
+	[SerializeField] private GameObject m_shipPrefab;
+	[SerializeField] private Transform m_shipContainer;
 
 
 	enum ShipTypes {
@@ -20,7 +22,6 @@ public class Ships : MonoBehaviour {
 		XLARGE
 	}
 
-	// Use this for initialization
 	void Start () {
 		switch(m_shipType){
 
@@ -50,8 +51,13 @@ public class Ships : MonoBehaviour {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	void CreateShip(){
+		
+		GameObject tmpship = Instantiate(m_shipPrefab);
+		tmpship.transform.parent = m_shipContainer.transform;
 	}
 }
