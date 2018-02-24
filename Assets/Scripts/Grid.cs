@@ -18,13 +18,57 @@ public class Grid : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+	char tileLetter = ' ';
 	SpriteRenderer m_renderer = m_waterTile.AddComponent<SpriteRenderer>();
 	m_renderer.sprite = m_sprite;
-		for(int i = 0; i < 10; i++){
-			for(int j = 0; j < 10; j++){
-				GameObject tmpTile = Instantiate(m_waterTile, new Vector3(i, j, 0),Quaternion.identity);
+		for(int i = 9; i >= 0; i--){
+			for(int j = 1; j < 11; j++){
+				GameObject tmpTile = Instantiate(m_waterTile, new Vector3(j, i, 0),Quaternion.identity);
 				Debug.Log("Row " + i + "Column " + j );
-				tmpTile.name = "Water Tile";
+
+				switch(i){
+					case 9:
+						tileLetter = 'A';
+					break;
+
+					case 8:
+						tileLetter = 'B';
+					break;
+
+					case 7:
+						tileLetter = 'C';
+					break;
+
+					case 6:
+						tileLetter = 'D';
+					break;
+
+					case 5:
+						tileLetter = 'E';
+					break;
+
+					case 4:
+						tileLetter = 'F';
+					break;
+
+					case 3:
+						tileLetter = 'G';
+					break;
+
+					case 2:
+						tileLetter = 'H';
+					break;
+
+					case 1:
+						tileLetter = 'I';
+					break;
+
+					case 0:
+						tileLetter = 'J';
+					break;
+				}
+
+				tmpTile.name = tileLetter + j.ToString();
 				tmpTile.transform.parent = m_gridContainer.transform;
 			}
 		}
