@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : NetworkBehaviour {
 
 	private int m_shipsLeft = 5;
 	
@@ -9,6 +10,10 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update(){
+		if (!isLocalPlayer)
+		{
+			return;
+		}
 
 	}
 
