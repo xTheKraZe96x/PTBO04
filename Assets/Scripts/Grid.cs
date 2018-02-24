@@ -7,6 +7,8 @@ public class Grid : MonoBehaviour {
 	private int m_rows = 10;
 	private int my_cols = 10;
 
+	private Vector3 m_gridStartPosition = new Vector3(2.5f, 0, 0);
+
 	public Sprite m_sprite;
 
 	public Transform m_gridContainer;
@@ -18,9 +20,9 @@ public class Grid : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	char tileLetter = ' ';
-	SpriteRenderer m_renderer = m_waterTile.AddComponent<SpriteRenderer>();
-	m_renderer.sprite = m_sprite;
+		char tileLetter = ' ';
+		SpriteRenderer m_renderer = m_waterTile.AddComponent<SpriteRenderer>();
+		m_renderer.sprite = m_sprite;
 		for(int i = 9; i >= 0; i--){
 			for(int j = 1; j < 11; j++){
 				GameObject tmpTile = Instantiate(m_waterTile, new Vector3(j, i, 0),Quaternion.identity);
@@ -72,6 +74,9 @@ public class Grid : MonoBehaviour {
 				tmpTile.transform.parent = m_gridContainer.transform;
 			}
 		}
+
+		m_gridContainer.transform.position = m_gridStartPosition;
+
 	}
 	
 	// Update is called once per frame
