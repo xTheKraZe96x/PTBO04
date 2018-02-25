@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 guid: 8c726c6e93d5498419404b68c7ab2fa2
+<<<<<<< HEAD
 timeCreated: 1519508985
+=======
+timeCreated: 1519519428
+>>>>>>> Prototype
 licenseType: Free
 TrueTypeFontImporter:
   externalObjects: {}
