@@ -19,9 +19,6 @@ public class Grid : MonoBehaviour {
 	public GameObject m_waterTile;
 
 
-	
-
-	// Use this for initialization
 	void Start () {
 		char tileLetter = ' ';
 		SpriteRenderer m_renderer = m_waterTile.AddComponent<SpriteRenderer>();
@@ -83,7 +80,6 @@ public class Grid : MonoBehaviour {
 		m_gridContainer.transform.parent = m_player.transform;
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}
