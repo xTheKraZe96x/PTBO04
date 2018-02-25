@@ -6,9 +6,12 @@ public class Grid : MonoBehaviour {
 	
 	private int m_rows = 10;
 	private int my_cols = 10;
-
 	private Vector3 m_gridStartPosition = new Vector3(2.0f, 0, 0);
+	public GameObject m_shipList;
 
+	
+	public GameObject m_player;
+	
 	public Sprite m_sprite;
 
 	public Transform m_gridContainer;
@@ -74,9 +77,10 @@ public class Grid : MonoBehaviour {
 				tmpTile.transform.parent = m_gridContainer.transform;
 			}
 		}
-
+		m_gridContainer.name = m_player.name + " Grid";
 		m_gridContainer.transform.position = m_gridStartPosition;
-
+		Instantiate(m_shipList);
+		m_gridContainer.transform.parent = m_player.transform;
 	}
 	
 	// Update is called once per frame
