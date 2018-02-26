@@ -137,7 +137,7 @@ Transform:
   m_GameObject: {fileID: 68935510}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 13, y: 6.5, z: 6.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -158,6 +158,8 @@ MonoBehaviour:
   m_sprite: {fileID: 21300000, guid: 4e749314a45503a4c80e161119e181ce, type: 3}
   m_gridContainer: {fileID: 68935511}
   m_waterTile: {fileID: 1687231557}
+  m_waterTilePrefab: {fileID: 1498836202548364, guid: 05800cd71b9383b40b4682622167abd3,
+    type: 2}
 --- !u!1 &466832941
 GameObject:
   m_ObjectHideFlags: 0
