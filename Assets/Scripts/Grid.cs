@@ -8,21 +8,25 @@ public class Grid : MonoBehaviour {
 	private int my_cols = 10;
 	private Vector3 m_gridStartPosition = new Vector3(2.0f, 0, 0);
 
+	// public Sprite m_sprite;
+	// public GameObject m_waterTile;
 	public GameObject m_shipList;
 	public GameObject m_player;
-	public Sprite m_sprite;
 	public Transform m_gridContainer;
-	public GameObject m_waterTile;
+	public GameObject m_waterTilePrefab;
+	public GridCheck m_gridCheck;
 
 
 	void Start () {
 		char tileLetter = ' ';
-		SpriteRenderer m_renderer = m_waterTile.AddComponent<SpriteRenderer>();
-		m_renderer.sprite = m_sprite;
+		int gridCount = 0;
+		// SpriteRenderer m_renderer = m_waterTile.AddComponent<SpriteRenderer>();
+		// m_renderer.sprite = m_sprite;
 		for(int i = 9; i >= 0; i--){
 			for(int j = 1; j < 11; j++){
-				GameObject tmpTile = Instantiate(m_waterTile, new Vector3(j, i, 0),Quaternion.identity);
-				Debug.Log("Row " + i + "Column " + j );
+				GameObject tmpTile = Instantiate(m_waterTilePrefab, new Vector3(j, i, 0),Quaternion.identity);
+				
+				// Debug.Log("Row " + i + "Column " + j );
 
 				switch(i){
 					case 9:
@@ -68,6 +72,8 @@ public class Grid : MonoBehaviour {
 
 				tmpTile.name = tileLetter + j.ToString();
 				tmpTile.transform.parent = m_gridContainer.transform;
+				m_gridCheck.m_gridList.Add(tmpTile);
+				gridCount++;
 			}
 		}
 		m_gridContainer.name = m_player.name + " Grid";

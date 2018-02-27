@@ -143,9 +143,10 @@ GameObject:
   - component: {fileID: 54583879747001622}
   - component: {fileID: 114991887595801368}
   - component: {fileID: 64437089079103416}
+  - component: {fileID: 65958527661236126}
   m_Layer: 0
   m_Name: MediumShip
-  m_TagString: Untagged
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1423,12 +1424,24 @@ MeshCollider:
   m_GameObject: {fileID: 1334163552778290}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 7851dd8b5ef0e954eb14a1300c5be178, type: 3}
+--- !u!65 &65958527661236126
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1334163552778290}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 28.50196, y: 65.45872, z: 80.97567}
+  m_Center: {x: 0, y: 32.72936, z: -8.00866}
 --- !u!114 &114991887595801368
 MonoBehaviour:
   m_ObjectHideFlags: 1
