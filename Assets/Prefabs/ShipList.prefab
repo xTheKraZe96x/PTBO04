@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 4185556834310076}
   m_Layer: 0
   m_Name: ShipList
-  m_TagString: Untagged
+  m_TagString: ShipList
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7149,8 +7149,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 28.50196, y: 100, z: 80.97566}
-  m_Center: {x: 0, y: 20, z: -8.008659}
+  m_Size: {x: 28.50196, y: 70, z: 80.97566}
+  m_Center: {x: 0, y: 25, z: -8.008659}
 --- !u!65 &65444734021489076
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -7161,8 +7161,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 28.50196, y: 100, z: 80.97566}
-  m_Center: {x: 0, y: 20, z: -8.008659}
+  m_Size: {x: 28.50196, y: 70, z: 80.97566}
+  m_Center: {x: 0, y: 25, z: -8.008659}
 --- !u!65 &65455898484402620
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -7173,8 +7173,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 28.50196, y: 100, z: 80.97567}
-  m_Center: {x: 0, y: 20, z: -8.00866}
+  m_Size: {x: 28.50196, y: 70, z: 80.97567}
+  m_Center: {x: 0, y: 25, z: -8.00866}
 --- !u!65 &65739127054460020
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -7185,8 +7185,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 28.50196, y: 100, z: 80.97567}
-  m_Center: {x: 0, y: 20, z: -8.00866}
+  m_Size: {x: 28.50196, y: 70, z: 80.97567}
+  m_Center: {x: 0, y: 25, z: -8.00866}
 --- !u!65 &65839058320566762
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -7197,8 +7197,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 28.50196, y: 100, z: 80.97566}
-  m_Center: {x: 0, y: 20, z: -8.008659}
+  m_Size: {x: 28.50196, y: 70, z: 80.97566}
+  m_Center: {x: 0, y: 25, z: -8.008659}
 --- !u!114 &114051375850254688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7211,6 +7211,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rgb: {fileID: 54412747383677300}
+  m_onTile: 0
+  m_shipScript: {fileID: 114051375850254688}
   m_collider: {fileID: 64944569956937318}
 --- !u!114 &114106216713416232
 MonoBehaviour:
@@ -7224,6 +7226,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rgb: {fileID: 54025255903544712}
+  m_onTile: 0
+  m_shipScript: {fileID: 114106216713416232}
   m_collider: {fileID: 64739972359717282}
 --- !u!114 &114354863029845038
 MonoBehaviour:
@@ -7237,6 +7241,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rgb: {fileID: 54170269773379340}
+  m_onTile: 0
+  m_shipScript: {fileID: 114354863029845038}
   m_collider: {fileID: 64220891251864862}
 --- !u!114 &114439939433058744
 MonoBehaviour:
@@ -7250,6 +7256,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rgb: {fileID: 54074209748255158}
+  m_onTile: 0
+  m_shipScript: {fileID: 114439939433058744}
   m_collider: {fileID: 64935797533447910}
 --- !u!114 &114539746751295354
 MonoBehaviour:
@@ -7263,4 +7271,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rgb: {fileID: 54581046077936076}
+  m_onTile: 0
+  m_shipScript: {fileID: 114539746751295354}
   m_collider: {fileID: 64451946514549498}

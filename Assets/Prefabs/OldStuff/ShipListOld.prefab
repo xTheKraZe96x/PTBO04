@@ -7211,6 +7211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rgb: {fileID: 54689614327626628}
+  m_gridCheck: {fileID: 0}
   m_collider: {fileID: 64479386312111516}
 --- !u!114 &114421112332963312
 MonoBehaviour:
@@ -7224,6 +7225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rgb: {fileID: 54234596705336838}
+  m_gridCheck: {fileID: 0}
   m_collider: {fileID: 64306853472653930}
 --- !u!114 &114595022567505734
 MonoBehaviour:
@@ -7237,6 +7239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rgb: {fileID: 54849710983660290}
+  m_gridCheck: {fileID: 0}
   m_collider: {fileID: 64588263148961114}
 --- !u!114 &114689333713258510
 MonoBehaviour:
@@ -7250,6 +7253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rgb: {fileID: 54409444025945672}
+  m_gridCheck: {fileID: 0}
   m_collider: {fileID: 64893347181091244}
 --- !u!114 &114724735468274856
 MonoBehaviour:
@@ -7263,4 +7267,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_rgb: {fileID: 54820719452947910}
+  m_gridCheck: {fileID: 0}
   m_collider: {fileID: 64873134082214060}

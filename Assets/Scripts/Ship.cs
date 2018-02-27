@@ -5,18 +5,22 @@ using UnityEngine;
 public class Ship : MonoBehaviour {
 
 	public Rigidbody m_rgb;
+	public bool m_onTile;
 	private int m_health;
 	private int m_size;
 	private bool m_isSelected;
+	// public GridCheck m_gridCheck;
 	RaycastHit m_shipHit;
-
+	public Ship m_shipScript;
 	public Collider m_collider;
-	
-	
+		
 
 	// Use this for initialization
 	void Start () {
 		m_collider = GetComponent<BoxCollider>();
+		m_shipScript = this.GetComponent<Ship>();
+		m_onTile = false;
+		// m_gridCheck = GameObject.FindObjectOfType<GridCheck>();
 	}
 	
 	// Update is called once per frame
@@ -50,6 +54,8 @@ public class Ship : MonoBehaviour {
 			m_isSelected = false;
 			this.transform.position = new Vector3(Mathf.RoundToInt(this.transform.position.x), Mathf.RoundToInt(this.transform.position.y), 0);
 			Debug.Log("Selected = " + this.m_isSelected);
+			// m_gridCheck.CheckGrid();
+			
 		} 
 
 		//Movement with mouse

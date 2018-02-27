@@ -8,11 +8,11 @@ public class Grid : MonoBehaviour {
 	private int my_cols = 10;
 	private Vector3 m_gridStartPosition = new Vector3(2.0f, 0, 0);
 
+	// public Sprite m_sprite;
+	// public GameObject m_waterTile;
 	public GameObject m_shipList;
 	public GameObject m_player;
-	public Sprite m_sprite;
 	public Transform m_gridContainer;
-	// public GameObject m_waterTile;
 	public GameObject m_waterTilePrefab;
 	public GridCheck m_gridCheck;
 

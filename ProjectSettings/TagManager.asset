@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fire
   - Ship
+  - ShipList
   layers:
   - Default
   - TransparentFX
