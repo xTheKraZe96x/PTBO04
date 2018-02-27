@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 68935511}
   - component: {fileID: 68935512}
+  - component: {fileID: 68935513}
   m_Layer: 0
   m_Name: Grid Container
   m_TagString: Untagged
@@ -137,7 +138,7 @@ Transform:
   m_GameObject: {fileID: 68935510}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 13, y: 6.5, z: 6.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -153,13 +154,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13dfbd4fca666134498469482f963494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_shipList: {fileID: 1412036247335008, guid: 75ff7444273dc384e9bd96c6831e41f4, type: 2}
+  m_shipList: {fileID: 1293425057843136, guid: 782992825c4917e44a5dc13a7c3c4413, type: 2}
   m_player: {fileID: 675348806}
-  m_sprite: {fileID: 21300000, guid: 4e749314a45503a4c80e161119e181ce, type: 3}
   m_gridContainer: {fileID: 68935511}
-  m_waterTile: {fileID: 1687231557}
   m_waterTilePrefab: {fileID: 1498836202548364, guid: 05800cd71b9383b40b4682622167abd3,
     type: 2}
+  m_gridCheck: {fileID: 68935513}
+--- !u!114 &68935513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 68935510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b69332f06f1c23c4bbc037d06603fe4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_gridList: []
+  m_shipTileList: []
 --- !u!1 &466832941
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +325,7 @@ RectTransform:
   m_Children:
   - {fileID: 1697993867}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -369,7 +382,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1229122542
 GameObject:
@@ -431,7 +444,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1542792391
 GameObject:
@@ -507,34 +520,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1542792391}
---- !u!1 &1687231557
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1687231558}
-  m_Layer: 0
-  m_Name: GridTile
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1687231558
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1687231557}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 0}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1697993866
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +532,7 @@ GameObject:
   - component: {fileID: 1697993869}
   - component: {fileID: 1697993868}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ReadyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -610,7 +595,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1697993869}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 68935513}
+        m_MethodName: ListShipTiles
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 68935513}
+        m_MethodName: ListShipGrid
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1697993869
