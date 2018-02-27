@@ -5,15 +5,18 @@ using UnityEngine;
 public class GridCheck : MonoBehaviour {
 
 	// public GameObject[] m_gridList;
+	public List<GameObject> m_shipList;
+	public GameObject m_shipListPrefab;
 
 	public List<GameObject> m_gridList;
 
 	void Start(){
+		// m_shipList = new List<GameObject>();
 		m_gridList = new List<GameObject>();
 	}
 
 	void Update(){
-		CheckGrid();
+		
 	}
 
 	void CheckGrid(){
